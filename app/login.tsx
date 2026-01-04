@@ -2,6 +2,7 @@ import { View, Text, TextInput, Pressable } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 import { styles } from "./styles/login.styles";
+import Screen from "./components/Screen";
 
 export default function LoginScreen() {
   // ---------- LOGIC ----------
@@ -31,6 +32,7 @@ export default function LoginScreen() {
 
   // ---------- UI ----------
   return (
+    <Screen>
     <View style={styles.container}>
       {/* App Title */}
       <Text style={styles.appTitle}>SiteSync</Text>
@@ -107,5 +109,6 @@ export default function LoginScreen() {
         <Text style={styles.link}>Terms & Privacy Policy</Text>
       </Text>
     </View>
+    </Screen>
   );
 }
