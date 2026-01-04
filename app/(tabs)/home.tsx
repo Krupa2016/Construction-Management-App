@@ -39,7 +39,11 @@ const SITES = PROJECTS;
             status={site.status}
             progress={site.progress}
             onPress={() => {
-              router.push(`/project/${site.id}`);
+             router.push({
+                pathname: "/project/[id]",
+                params: { id: site.id.toString() },
+                });
+
 
             }}
           />
