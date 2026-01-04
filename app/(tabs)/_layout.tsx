@@ -64,6 +64,18 @@ export default function TabsLayout() {
           ),
         }}
       />
-    </Tabs>
+
+            {/* HIDE project from tab bar */}
+                  <Tabs.Screen
+            name="project/[id]"
+            options={{
+              href: null,
+            }}
+          />
+
+      </Tabs>
+
+      
+   
   );
 }
