@@ -91,17 +91,32 @@ export default function ProjectPage() {
           <Text style={styles.cardTitle}>Daily Tasks</Text>
 
           <View style={styles.taskActions}>
-            <Pressable style={[styles.actionBox, styles.yellow]}  onPress={() => router.push(`/project/attendance?id=${id}`)}>
-              <Ionicons name="list-outline" size={40} />
-              <Text style={styles.actionText}>Mark Attendance</Text>
-            </Pressable>
+                            <Pressable
+                              style={[styles.actionBox, styles.yellow]}
+                              onPress={() =>
+                                router.push({
+                                  pathname: "/(tabs)/project/attendance",
+                                  params: { id },
+                                })
+                              }
+                            >
+                              <Ionicons name="list-outline" size={40} />
+                              <Text style={styles.actionText}>Mark Attendance</Text>
+                            </Pressable>
 
+                                <Pressable
+                                  style={[styles.actionBox, styles.blue]}
+                                  onPress={() =>
+                                    router.push({
+                                      pathname: "/(tabs)/project/dpr",
+                                      params: { id },
+                                    })
+                                  }
+                                >
+                                  <Ionicons name="document-text-outline" size={40} />
+                                  <Text style={styles.actionText}>Add DPR</Text>
+                                </Pressable>
 
-
-            <Pressable style={[styles.actionBox, styles.blue]}>
-              <Ionicons name="document-text-outline" size={40} />
-              <Text style={styles.actionText}>Add DPR</Text>
-            </Pressable>
           </View>
 
            {/* Upcoming Tasks */}
