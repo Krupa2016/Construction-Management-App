@@ -91,10 +91,12 @@ export default function ProjectPage() {
           <Text style={styles.cardTitle}>Daily Tasks</Text>
 
           <View style={styles.taskActions}>
-            <Pressable style={[styles.actionBox, styles.yellow]}>
+            <Pressable style={[styles.actionBox, styles.yellow]}  onPress={() => router.push(`/project/attendance?id=${id}`)}>
               <Ionicons name="list-outline" size={40} />
               <Text style={styles.actionText}>Mark Attendance</Text>
             </Pressable>
+
+
 
             <Pressable style={[styles.actionBox, styles.blue]}>
               <Ionicons name="document-text-outline" size={40} />
