@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Pressable } from "react-native";
+import { View, Text, TextInput, Pressable,Image } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 import { styles } from "./styles/login.styles";
@@ -7,6 +7,20 @@ import Screen from "./components/Screen";
 export default function LoginScreen() {
   // ---------- LOGIC ----------
   const router = useRouter();
+const roles = [
+  {
+    label: "Site Engineer",
+    image: require("../assets/images/site_engineer.png"),
+  },
+  {
+    label: "Manager",
+    image: require("../assets/images/manager.png"),
+  },
+  {
+    label: "Owner",
+    image: require("../assets/images/owner.png"),
+  },
+];
 
   const [role, setRole] = useState<string | null>(null);
   const [email, setEmail] = useState("");
@@ -32,6 +46,7 @@ export default function LoginScreen() {
 
   // ---------- UI ----------
   return (
+    <>
     <Screen>
     <View style={styles.container}>
       {/* App Title */}
@@ -41,20 +56,30 @@ export default function LoginScreen() {
       <Text style={styles.heading}>Choose Your Role</Text>
 
       {/* Role Selector */}
-      <View style={styles.roleRow}>
-        {["Site Engineer", "Manager", "Owner"].map((item) => (
-          <Pressable
-            key={item}
-            onPress={() => setRole(item)}
-            style={[
-              styles.roleCard,
-              role === item && styles.roleSelected,
-            ]}
-          >
-            <Text style={styles.roleText}>{item}</Text>
-          </Pressable>
-        ))}
-      </View>
+                  <View style={styles.roleRow}>
+                    {roles.map((item) => (
+                      <View key={item.label} style={styles.roleWrapper}>
+                        <Pressable
+                          onPress={() => setRole(item.label)}
+                          style={[
+                            styles.roleCard,
+                            role === item.label && styles.roleSelected,
+                          ]}
+                        >
+                          <Image
+                            source={item.image}
+                            style={styles.roleImage}
+                            resizeMode="cover"
+                          />
+                        </Pressable>
+
+                        {/* Text BELOW the card */}
+                        <Text style={styles.roleText}>{item.label}</Text>
+                      </View>
+                    ))}
+                  </View>
+
+      
 
       {/* Email */}
       <TextInput
@@ -105,10 +130,12 @@ export default function LoginScreen() {
 
       {/* Footer */}
       <Text style={styles.footer}>
-        By logging in, you agree to our{" "}
+        By logging in, you agree to our</Text>
         <Text style={styles.link}>Terms & Privacy Policy</Text>
-      </Text>
+    
     </View>
     </Screen>
+    </>
+    
   );
 }

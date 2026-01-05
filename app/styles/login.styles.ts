@@ -21,31 +21,12 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  roleRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 30,
-  },
-
-  roleCard: {
-    width: "30%",
-    height: 90,
-    backgroundColor: "#f1f1f1",
-    borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
-  },
 
   roleSelected: {
     borderWidth: 2,
     borderColor: "#f5c400",
   },
 
-  roleText: {
-    fontSize: 12,
-    textAlign: "center",
-    fontWeight: "500",
-  },
 
   input: {
     height: 50,
@@ -107,6 +88,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 
+
   footer: {
     fontSize: 12,
     color: "#666",
@@ -115,5 +97,36 @@ export const styles = StyleSheet.create({
 
   link: {
     color: "#f5a000",
+     textAlign: "center",
   },
+
+
+
+roleCard: {
+  width: 120,
+  height: 120,
+  borderRadius: 10,
+  overflow: "hidden",   // 🔥 REQUIRED for cover image
+},
+roleImage: {
+  width: "100%",
+  height: "100%",
+},
+
+roleWrapper: {
+  alignItems: "center",
+},
+roleText: {
+  marginTop: 6,
+  fontSize: 12,
+  fontWeight: "500",
+  textAlign: "center",
+},
+roleRow: {
+  flexDirection: "row",
+  justifyContent: "space-evenly",
+  marginBottom: 30,
+},
+
+
 });
