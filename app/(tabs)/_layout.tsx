@@ -73,6 +73,13 @@ export default function TabsLayout() {
             }}
           />
 
+              <Tabs.Screen
+            name="project/attendance"
+            options={{
+              href: null,
+            }}
+          />
+
       </Tabs>
 
       
