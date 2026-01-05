@@ -33,13 +33,13 @@ export const styles = StyleSheet.create({
     color: "#fff",
   },
   onTrack: {
-    backgroundColor: "#2ecc71",
+    backgroundColor: "#008A07",
   },
   delayed: {
-    backgroundColor: "#e74c3c",
+    backgroundColor: "#8A0000",
   },
   ahead: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#00108A",
   },
 
   /* Location */

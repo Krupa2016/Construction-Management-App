@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { styles } from "../styles/profile.styles";
+import { styles } from "../../styles/Site/profile.styles";
 
 type Props = {
   icon: keyof typeof Ionicons.glyphMap;

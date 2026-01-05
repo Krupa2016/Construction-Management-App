@@ -1,5 +1,5 @@
 import { View, Text, TextInput, Pressable } from "react-native";
-import { styles } from "../../styles/stock.styles";
+import { styles } from "../../styles/Site/stock.styles";
 
 export default function StockRequestCard() {
   return (

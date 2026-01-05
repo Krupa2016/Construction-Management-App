@@ -1,10 +1,10 @@
 import { View, Text, ScrollView, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Screen from "../components/Screen";
-import StockRequestCard from "../components/Stock/StockRequestCard";
-import StockItem from "../components/Stock/StockItem";
-import StockSummaryCard from "../components/Stock/StockSummaryCard";
-import { styles } from "../styles/stock.styles";
+import StockRequestCard from "../components/site/StockRequestCard";
+import StockItem from "../components/site/StockItem";
+import StockSummaryCard from "../components/site/StockSummaryCard";
+import { styles } from "../styles/Site/stock.styles";
 import { useLocalSearchParams, useRouter } from "expo-router";
 
 export default function Stock() {

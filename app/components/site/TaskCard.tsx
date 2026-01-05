@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { styles } from "../styles/taskCard.styles";
+import { styles } from "../../styles/Site/taskCard.styles";
 
 type TaskCardProps = {
   title: string;

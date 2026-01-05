@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { styles } from "../styles/siteCard.styles";
+import { styles } from "../../styles/Site/siteCard.styles";
 
 
 type SiteCardProps = {

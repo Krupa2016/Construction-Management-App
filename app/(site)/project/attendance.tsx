@@ -1,8 +1,8 @@
-import { View, Text, ScrollView, Pressable } from "react-native";
+import { View, Text, ScrollView, Pressable,Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import Screen from "../../components/Screen";
-import { styles } from "../../styles/attendance.styles";
+import { styles } from "../../styles/Site/attendance.styles";
 import { Modal, TextInput } from "react-native";
 import { useState } from "react";
 
@@ -54,11 +54,16 @@ const [tempWage, setTempWage] = useState("");
           <Text style={styles.offlineBadge}>OFFLINE</Text>
           <Text style={styles.siteName}>Lotus Residency</Text>
         </View>
-
-        {/* Map Placeholder */}
-        <View style={styles.mapBox}>
-          <Text>📍 Map View</Text>
-        </View>
+        
+            <View style={styles.mapBox}>
+              <Image
+                source={{
+                  uri: "https://i.pinimg.com/736x/ed/49/a3/ed49a36e188a26dddc546535857cd505.jpg",
+                }}
+                style={styles.mapImage}
+                resizeMode="cover"
+              />
+            </View>
 
         <Pressable style={styles.checkInBtn}>
           <Text style={styles.checkInText}>CHECK IN</Text>

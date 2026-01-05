@@ -1,9 +1,9 @@
 import { View, Text, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Screen from "../components/Screen";
-import { styles } from "../styles/home.styles";
+import { styles } from "../styles/Site/home.styles";
 import { useRouter } from "expo-router";
-import SiteCard from "../components/SiteCard";
+import SiteCard from "../components/site/SiteCard";
 import { PROJECTS } from "../data/project";
 
 

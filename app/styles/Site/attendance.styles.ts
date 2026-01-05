@@ -34,14 +34,18 @@ export const styles = StyleSheet.create({
     marginTop: 6,
   },
 
-  mapBox: {
-    height: 200,
-    backgroundColor: "#eee",
-    borderRadius: 12,
-    marginVertical: 12,
-    alignItems: "center",
-    justifyContent: "center",
-  },
+ mapBox: {
+  height: 160,
+  borderRadius: 12,
+  overflow: "hidden",
+  marginTop: 12,
+  marginBottom: 20,
+},
+
+mapImage: {
+  width: "100%",
+  height: "100%",
+},
 
   checkInBtn: {
     backgroundColor: "#F5C400",

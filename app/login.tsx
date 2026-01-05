@@ -27,7 +27,7 @@ export default function LoginScreen() {
     console.log({ role, email, password });
 
     // Temporary success navigation
-    router.replace("/(tabs)/home");
+    router.replace("/(site)/home");
   };
 
   // ---------- UI ----------

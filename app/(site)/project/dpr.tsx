@@ -2,8 +2,8 @@ import { View, Text, ScrollView, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import Screen from "../../components/Screen";
-import DPRForm from "../../components/DPRFrom";
-import { styles } from "../../styles/dpr.styles";
+import DPRForm from "../../components/site/DPRFrom";
+import { styles } from "../../styles/Site/dpr.styles";
 import { Image } from "react-native";
 
 

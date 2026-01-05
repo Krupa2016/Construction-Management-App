@@ -7,5 +7,5 @@ export default function Index() {
     return <Redirect href="/login" />;
   }
 
-  return <Redirect href="/(tabs)/home" />;
+  return <Redirect href="/(site)/home" />;
 }
