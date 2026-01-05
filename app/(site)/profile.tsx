@@ -1,8 +1,8 @@
 import { View, Text, ScrollView,Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Screen from "../components/Screen";
-import ProfileItem from "../components/ProfileItem";
-import { styles } from "../styles/profile.styles";
+import ProfileItem from "../components/site/ProfileItem";
+import { styles } from "../styles/Site/profile.styles";
 import { useLocalSearchParams, useRouter } from "expo-router";
 
 export default function Profile() {

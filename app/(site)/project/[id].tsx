@@ -2,7 +2,7 @@ import { View, Text, ScrollView, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import Screen from "../../components/Screen";
-import { styles } from "../../styles/project.styles";
+import { styles } from "../../styles/Site/project.styles";
 import { PROJECTS } from "../../data/project";
 
 export default function ProjectPage() {
@@ -95,7 +95,7 @@ export default function ProjectPage() {
                               style={[styles.actionBox, styles.yellow]}
                               onPress={() =>
                                 router.push({
-                                  pathname: "/(tabs)/project/attendance",
+                                  pathname: "/(site)/project/attendance",
                                   params: { id },
                                 })
                               }
@@ -108,7 +108,7 @@ export default function ProjectPage() {
                                   style={[styles.actionBox, styles.blue]}
                                   onPress={() =>
                                     router.push({
-                                      pathname: "/(tabs)/project/dpr",
+                                      pathname: "/(site)/project/dpr",
                                       params: { id },
                                     })
                                   }

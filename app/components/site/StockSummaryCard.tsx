@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import { styles } from "../../styles/stock.styles";
+import { styles } from "../../styles/Site/stock.styles";
 
 type Props = {
   name: string;

@@ -1,6 +1,6 @@
 import { View, Text, TextInput, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { styles } from "../styles/dprForm.styles";
+import { styles } from "../../styles/Site/dprForm.styles";
 
 
 type Props = {

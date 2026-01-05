@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, Pressable} from "react-native";
 import Screen from "../components/Screen";
-import TaskCard from "../components/TaskCard";
-import { styles } from "../styles/tasks.styles";
+import TaskCard from "../components/site/TaskCard";
+import { styles } from "../styles/Site/tasks.styles";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";  
 
