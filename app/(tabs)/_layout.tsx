@@ -80,6 +80,13 @@ export default function TabsLayout() {
             }}
           />
 
+          <Tabs.Screen
+            name="project/dpr"
+            options={{
+              href: null,
+            }}
+          />
+
       </Tabs>
 
       
