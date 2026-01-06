@@ -69,4 +69,18 @@ statValue: {
   gap: 6,                // 👈 spacing between icon & text
 },
 
+
+ imageWrapper: {
+  alignItems: "center",      // horizontal center
+  justifyContent: "center",  // vertical center
+},
+
+userAvatar: {
+  marginTop: 30,
+  height: 300,
+  width: "89%",
+  marginLeft: -60,
+},
+
+
 });

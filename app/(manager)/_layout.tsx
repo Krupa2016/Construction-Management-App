@@ -21,6 +21,18 @@ export default function ManagerTabs() {
         }}
       />
 
+
+          <Tabs.Screen
+                  name="attendance"
+                  options={{
+                    title: "Attendance",
+                    tabBarIcon: ({ color, size }) => (
+                      <Ionicons name="receipt-outline" size={size} color={color} />
+                    ),
+                  }}
+                />
+
+
       <Tabs.Screen
         name="stock"
         options={{
@@ -31,15 +43,7 @@ export default function ManagerTabs() {
         }}
       />
 
-      <Tabs.Screen
-        name="invoices"
-        options={{
-          title: "Invoices",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="receipt-outline" size={size} color={color} />
-          ),
-        }}
-      />
+     
 
       <Tabs.Screen
         name="profile"
@@ -83,6 +87,13 @@ export default function ManagerTabs() {
 
           <Tabs.Screen
             name="project/invoice"
+            options={{
+              href: null,
+            }}
+          />
+
+            <Tabs.Screen
+            name="project/new_project"
             options={{
               href: null,
             }}

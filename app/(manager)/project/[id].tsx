@@ -1,4 +1,4 @@
-import { View, Text, Pressable, ScrollView } from "react-native";
+import { View, Text, Pressable, ScrollView , Image} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import Screen from "../../components/Screen";
@@ -68,40 +68,60 @@ export default function ManagerProjectPage() {
 
 
         {/* Quick Actions */}
-        <Text style={styles.sectionTitle}>Quick Actions</Text>
 
-        <Pressable
-          style={styles.actionBtn}
-          onPress={() =>
-           router.push(`/(manager)/project/dpr_approval?id=${project.id}`)
-          }
-        >
-          <Ionicons name="document-text-outline" size={20} />
-          <Text style={styles.actionText}>Approve DPR</Text>
-        </Pressable>
+        <View style={{ marginTop: 24 }}>
+          <Text style={styles.sectionTitle}>Quick Actions</Text>
 
-        <Pressable
-          style={styles.actionBtn}
-          onPress={() =>
-            router.push(`/(manager)/project/material_approval?id=${project.id}`)
-          }
-        >
-          <Ionicons name="cart-outline" size={20} />
-          <Text style={styles.actionText}>Approve Material</Text>
-        </Pressable>
+                <Pressable
+                  style={styles.actionBtn}
+                  onPress={() =>
+                  router.push(`/(manager)/project/dpr_approval?id=${project.id}`)
+                  }
+                >
+                  <Ionicons name="document-text-outline" size={20} />
+                  <Text style={styles.actionText}>Approve DPR</Text>
+                </Pressable>
+
+                <Pressable
+                  style={styles.actionBtn}
+                  onPress={() =>
+                    router.push(`/(manager)/project/material_approval?id=${project.id}`)
+                  }
+                >
+                  <Ionicons name="cart-outline" size={20} />
+                  <Text style={styles.actionText}>Approve Material</Text>
+                </Pressable>
 
 
+                <Pressable
+                  style={styles.actionBtn}
+                  onPress={() =>
+                  router.push(`/(manager)/project/generate_invoice?id=${project.id}`)
+                  }
+                >
+                  <Ionicons name="receipt-outline" size={20} />
+                  <Text style={styles.actionText}>Generate Invoice</Text>
+                </Pressable>
+
+        </View>
+      
+
+          <View style={styles.imageWrapper}>
+            <Image
+              source={require("../../../assets/images/labour_usage.png")}
+              style={styles.userAvatar}
+              resizeMode="contain"
+            />
+          </View>
 
 
-        <Pressable
-          style={styles.actionBtn}
-          onPress={() =>
-          router.push(`/(manager)/project/generate_invoice?id=${project.id}`)
-          }
-        >
-          <Ionicons name="receipt-outline" size={20} />
-          <Text style={styles.actionText}>Generate Invoice</Text>
-        </Pressable>
+                    <View style={styles.imageWrapper}>
+            <Image
+              source={require("../../../assets/images/material_used.png")}
+              style={styles.userAvatar}
+              resizeMode="contain"
+            />
+          </View>
 
       </ScrollView>
     </Screen>

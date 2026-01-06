@@ -1,7 +1,10 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: { padding: 16},
+  container: { 
+    padding: 16,
+     backgroundColor: "#F6F6F6",
+  },
 
   header: {
     flexDirection: "row",

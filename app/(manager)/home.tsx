@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Pressable } from "react-native";
+import { View, Text, ScrollView, Pressable,Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import Screen from "../components/Screen";
@@ -18,7 +18,12 @@ export default function ManagerHome() {
           <Text style={styles.appName}>SiteSync</Text>
 
           <View style={styles.welcomeRow}>
-            <Ionicons name="construct-outline" size={36} color="#F5C400" />
+           <Image
+                source={require("../../assets/images/manager.png")} // change path if needed
+                style={styles.userAvatar}
+                resizeMode="cover"
+                />
+
             <Text style={styles.welcomeText}>Welcome, Rahul</Text>
           </View>
         </View>
@@ -43,7 +48,7 @@ export default function ManagerHome() {
         {/* New Project */}
         <Pressable
           style={styles.newProject}
-          onPress={() => router.push("/(manager)/new-project")}
+          onPress={() => router.push("/(manager)/project/new_project")}
         >
           <Ionicons name="add-circle-outline" size={22} />
           <Text style={styles.newProjectText}>New Project</Text>

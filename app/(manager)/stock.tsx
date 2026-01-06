@@ -46,7 +46,7 @@ const router = useRouter();
 
   return (
     <Screen>
-        <ScrollView contentContainerStyle={styles.container}>
+    
 
       <View style={styles.container}>
         {/* Page Title */}
@@ -70,10 +70,6 @@ const router = useRouter();
           ))}
         </ScrollView>
       </View>
-
-      
-            
-        </ScrollView>
     </Screen>
   );
 }

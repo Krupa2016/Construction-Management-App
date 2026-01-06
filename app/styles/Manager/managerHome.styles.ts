@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginTop: 10,
-    gap: 10,
+    // gap: 4,
   },
 
   welcomeText: {
@@ -45,4 +45,10 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "500",
   },
+   userAvatar: {
+  width: 60,
+  height:60,
+  borderRadius: 5,
+  marginRight: 12,
+},
 });
