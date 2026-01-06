@@ -83,12 +83,15 @@ export default function ManagerProjectPage() {
         <Pressable
           style={styles.actionBtn}
           onPress={() =>
-            router.push(`/(manager)/material-approval?id=${project.id}`)
+            router.push(`/(manager)/project/material_approval?id=${project.id}`)
           }
         >
           <Ionicons name="cart-outline" size={20} />
           <Text style={styles.actionText}>Approve Material</Text>
         </Pressable>
+
+
+
 
         <Pressable
           style={styles.actionBtn}
