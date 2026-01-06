@@ -60,6 +60,20 @@ export default function ManagerTabs() {
             }}
           />
 
+                  <Tabs.Screen
+            name="project/material_approval"
+            options={{
+              href: null,
+            }}
+          />
+
+                  <Tabs.Screen
+            name="project/dpr_approval"
+            options={{
+              href: null,
+            }}
+          />
+
           
     </Tabs>
   );
