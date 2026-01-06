@@ -7,6 +7,9 @@ export type Project = {
   startDate: string;
   endDate: string;
   tasks: number;
+  workers: number;
+  materialCost: number;
+  pendingTasks: number;
 };
 
 export const PROJECTS: Project[] = [
@@ -19,6 +22,9 @@ export const PROJECTS: Project[] = [
     startDate: "26/01/2025",
     endDate: "18/11/2026",
     tasks: 70,
+    workers: 45000,
+    materialCost: 12.5,
+    pendingTasks: 10,
   },
   {
     id: "2",
@@ -29,6 +35,9 @@ export const PROJECTS: Project[] = [
     startDate: "12/03/2024",
     endDate: "30/09/2025",
     tasks: 52,
+    workers: 45000,
+    materialCost: 12.5,
+    pendingTasks: 10,
   },
   {
     id: "3",
@@ -39,6 +48,9 @@ export const PROJECTS: Project[] = [
     startDate: "01/02/2025",
     endDate: "20/12/2026",
     tasks: 110,
+    workers: 45000,
+    materialCost: 12.5,
+    pendingTasks: 10,
   },
   {
     id: "4",
@@ -49,15 +61,9 @@ export const PROJECTS: Project[] = [
     startDate: "10/01/2025",
     endDate: "15/08/2026",
     tasks: 95,
+    workers: 45000,
+    materialCost: 12.5,
+   pendingTasks: 10,
   },
-  {
-    id: "5",
-    name: "Highway Bridge",
-    location: "Mumbai, Maharashtra",
-    status: "On Track",
-    progress: 60,
-    startDate: "05/06/2024",
-    endDate: "10/03/2026",
-    tasks: 140,
-  },
+  
 ];
