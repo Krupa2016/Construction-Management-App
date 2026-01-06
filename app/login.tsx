@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useRouter } from "expo-router";
 import { styles } from "./styles/login.styles";
 import Screen from "./components/Screen";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 
 export default function LoginScreen() {
   // ---------- LOGIC ----------
@@ -26,23 +28,25 @@ const roles = [
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    if (!role) {
-      alert("Please select your role");
-      return;
-    }
+      const handleLogin = async () => {
+        if (!role) {
+          alert("Please select your role");
+          return;
+        }
 
-    if (!email || !password) {
-      alert("Email and password required");
-      return;
-    }
+        if (!email || !password) {
+          alert("Email and password required");
+          return;
+        }
 
-    // 🔗 Later: real auth (Firebase / API)
-    console.log({ role, email, password });
+        // TEMP: save auth state
+        await AsyncStorage.setItem("isLoggedIn", "true");
+        await AsyncStorage.setItem("userRole", role.toLowerCase()); 
+        // manager | site engineer | owner
 
-    // Temporary success navigation
-    router.replace("/(site)/home");
-  };
+        router.replace("/"); // 🔥 go to index.tsx
+      };
+
 
   // ---------- UI ----------
   return (

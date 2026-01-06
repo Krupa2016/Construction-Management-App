@@ -29,13 +29,13 @@ export default function Profile() {
         {/* User Card */}
         <View style={styles.userCard}>
                         <Image
-                source={require("../../assets/images/manager.png")} // change path if needed
+                source={require("../../assets/images/owner.png")} // change path if needed
                 style={styles.userAvatar}
                 resizeMode="cover"
                 />
 
           <View>
-            <Text style={styles.userName}>Rahul Mehter</Text>
+            <Text style={styles.userName}>Aaditya Sharma</Text>
             <Text style={styles.userPhone}>+91 784367302</Text>
           </View>
         </View>

@@ -3,10 +3,18 @@ import { Ionicons } from "@expo/vector-icons";
 import Screen from "../components/Screen";
 import ProfileItem from "../components/site/ProfileItem";
 import { styles } from "../styles/Site/profile.styles";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useLocalSearchParams, useRouter } from "expo-router";
 
 export default function Profile() {
     const router = useRouter();
+    const handleLogout = async () => {
+  await AsyncStorage.removeItem("isLoggedIn");
+  await AsyncStorage.removeItem("userRole");
+
+  router.replace("/login"); // 🔥 go back to login
+};
+
   return (
     <Screen>
       <ScrollView contentContainerStyle={styles.container}>
@@ -20,11 +28,12 @@ export default function Profile() {
 
         {/* User Card */}
         <View style={styles.userCard}>
-            <Image
-                          source={require("../../assets/images/site_engineer.png")} // change path if needed
-                          style={styles.userAvatar}
-                          resizeMode="cover"
-                          />
+                        <Image
+                source={require("../../assets/images/site_engineer.png")} // change path if needed
+                style={styles.userAvatar}
+                resizeMode="cover"
+                />
+
           <View>
             <Text style={styles.userName}>Amit Kumar</Text>
             <Text style={styles.userPhone}>+91 784367302</Text>
@@ -63,10 +72,11 @@ export default function Profile() {
         </View>
 
         {/* Logout */}
-        <View style={styles.logoutBox}>
+        <Pressable style={styles.logoutBox} onPress={handleLogout}>
           <Ionicons name="log-out-outline" size={18} color="red" />
           <Text style={styles.logoutText}>Logout</Text>
-        </View>
+        </Pressable>
+
       </ScrollView>
     </Screen>
   );

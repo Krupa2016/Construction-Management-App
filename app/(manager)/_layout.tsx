@@ -3,12 +3,13 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function ManagerTabs() {
   return (
-    <Tabs
+     <Tabs
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#f5c400",
-        tabBarInactiveTintColor: "#888",
-        tabBarStyle: { height: 60, paddingBottom: 4 },
+        tabBarInactiveTintColor: "#110e0eff",
+        tabBarStyle: { height: 80, paddingBottom: 4, },
+        tabBarLabelStyle: { fontSize: 13, fontWeight: "600", },     
       }}
     >
       <Tabs.Screen

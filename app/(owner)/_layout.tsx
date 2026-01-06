@@ -1,9 +1,9 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function TabsLayout() {
+export default function ManagerTabs() {
   return (
-     <Tabs
+    <Tabs
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#f5c400",
@@ -12,8 +12,6 @@ export default function TabsLayout() {
         tabBarLabelStyle: { fontSize: 13, fontWeight: "600", },     
       }}
     >
-    
-      {/* Home */}
       <Tabs.Screen
         name="home"
         options={{
@@ -25,31 +23,29 @@ export default function TabsLayout() {
       />
 
 
-{/* tasks */}
-                <Tabs.Screen
-            name="tasks"
-            options={{
-                title: "Tasks",
-                tabBarIcon: ({ color, size }) => (
-                <Ionicons name="clipboard-outline" size={size} color={color} />
-                ),
-            }}
-            />
+          <Tabs.Screen
+                  name="attendance"
+                  options={{
+                    title: "Attendance",
+                    tabBarIcon: ({ color, size }) => (
+                      <Ionicons name="receipt-outline" size={size} color={color} />
+                    ),
+                  }}
+                />
 
-      {/* Materials */}
+
       <Tabs.Screen
         name="stock"
         options={{
           title: "Stock",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="cube-outline" size={size} color={color} />
+            <Ionicons name="cart-outline" size={size} color={color} />
           ),
         }}
       />
 
-    
+     
 
-      {/* Profile */}
       <Tabs.Screen
         name="profile"
         options={{
@@ -60,7 +56,8 @@ export default function TabsLayout() {
         }}
       />
 
-            {/* HIDE project from tab bar */}
+
+      {/* HIDE project from tab bar */}
                   <Tabs.Screen
             name="project/[id]"
             options={{
@@ -68,23 +65,42 @@ export default function TabsLayout() {
             }}
           />
 
-              <Tabs.Screen
-            name="project/attendance"
+                  <Tabs.Screen
+            name="project/material_approval"
+            options={{
+              href: null,
+            }}
+          />
+
+                  <Tabs.Screen
+            name="project/dpr_approval"
+            options={{
+              href: null,
+            }}
+          />
+
+           <Tabs.Screen
+            name="project/generate_invoice"
             options={{
               href: null,
             }}
           />
 
           <Tabs.Screen
-            name="project/dpr"
+            name="project/invoice"
             options={{
               href: null,
             }}
           />
 
-      </Tabs>
+            <Tabs.Screen
+            name="project/new_project"
+            options={{
+              href: null,
+            }}
+          />
 
-      
-   
+          
+    </Tabs>
   );
 }
