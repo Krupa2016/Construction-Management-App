@@ -96,7 +96,7 @@ export default function ManagerProjectPage() {
         <Pressable
           style={styles.actionBtn}
           onPress={() =>
-            router.push(`/(manager)/invoice?id=${project.id}`)
+          router.push(`/(manager)/project/generate_invoice?id=${project.id}`)
           }
         >
           <Ionicons name="receipt-outline" size={20} />

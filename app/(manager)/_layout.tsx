@@ -74,6 +74,13 @@ export default function ManagerTabs() {
             }}
           />
 
+           <Tabs.Screen
+            name="project/generate_invoice"
+            options={{
+              href: null,
+            }}
+          />
+
           
     </Tabs>
   );
