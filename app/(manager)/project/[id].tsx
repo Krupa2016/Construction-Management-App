@@ -73,7 +73,7 @@ export default function ManagerProjectPage() {
         <Pressable
           style={styles.actionBtn}
           onPress={() =>
-            router.push(`/(manager)/dpr-approval?id=${project.id}`)
+           router.push(`/(manager)/project/dpr_approval?id=${project.id}`)
           }
         >
           <Ionicons name="document-text-outline" size={20} />
