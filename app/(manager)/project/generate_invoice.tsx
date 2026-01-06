@@ -1,18 +1,21 @@
 import { View, Text, ScrollView, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
 import { useState } from "react";
 import Screen from "../../components/Screen";
 import { styles } from "../../styles/Manager/generateInvoice.styles";
 import { Picker } from "@react-native-picker/picker";
 import { CLIENTS } from "../../data/clients";
 import { Modal, TextInput } from "react-native";
+import { useLocalSearchParams, useRouter } from "expo-router";
+
 
 
 
 
 
 export default function GenerateInvoice() {
+
+  const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
 const [clientId, setClientId] = useState<string>();
 const selectedClient = CLIENTS.find(c => c.id === clientId);
@@ -216,7 +219,11 @@ const [showModal, setShowModal] = useState(false);
         </View>
 
         {/* Generate */}
-        <Pressable style={styles.generateBtn}>
+           <Pressable
+                    style={styles.generateBtn}
+                    onPress={() =>
+                   router.push(`/project/invoice?id=${id}`)
+                    }>
           <Text style={styles.generateText}>Generate Invoice</Text>
         </Pressable>
       </ScrollView>

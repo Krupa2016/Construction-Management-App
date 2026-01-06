@@ -22,11 +22,11 @@ export default function ManagerTabs() {
       />
 
       <Tabs.Screen
-        name="approvals"
+        name="stock"
         options={{
-          title: "Approvals",
+          title: "Stock",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="checkmark-done-outline" size={size} color={color} />
+            <Ionicons name="cart-outline" size={size} color={color} />
           ),
         }}
       />
@@ -76,6 +76,13 @@ export default function ManagerTabs() {
 
            <Tabs.Screen
             name="project/generate_invoice"
+            options={{
+              href: null,
+            }}
+          />
+
+          <Tabs.Screen
+            name="project/invoice"
             options={{
               href: null,
             }}

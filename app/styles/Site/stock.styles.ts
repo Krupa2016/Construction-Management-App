@@ -7,6 +7,14 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
+    marginBottom: 16,
+  },
+
+  
+  pageTitle: {
+    fontSize: 20,
+    fontWeight: "700",
+    marginBottom: 16,
   },
 
   title: { fontSize: 18, fontWeight: "600" },
@@ -78,4 +86,28 @@ export const styles = StyleSheet.create({
   pending: { color: "#3f51b5" },
 
   required: { color: "red" },
+
+
+
+  titleRow: {
+  flexDirection: "row",
+  alignItems: "center",
+  marginBottom: 6,
+},
+
+row: {
+  flexDirection: "row",
+  alignItems: "center",
+  marginTop: 4,
+},
+
+
+
+text: {
+  marginLeft: 6,
+  color: "#333",
+},
+
+
+
 });

@@ -21,13 +21,21 @@ export const styles = StyleSheet.create({
   userCard: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    gap: 4,
     backgroundColor: "#fff",
     padding: 14,
     borderRadius: 12,
     marginBottom: 18,
     elevation: 2,
   },
+
+  userAvatar: {
+  width: 60,
+  height:60,
+  borderRadius: 3,
+  marginRight: 12,
+},
+
 
   userName: {
     fontSize: 16,

@@ -20,13 +20,14 @@ export default function Profile() {
 
         {/* User Card */}
         <View style={styles.userCard}>
-            <Image
-                          source={require("../../assets/images/site_engineer.png")} // change path if needed
-                          style={styles.userAvatar}
-                          resizeMode="cover"
-                          />
+                        <Image
+                source={require("../../assets/images/manager.png")} // change path if needed
+                style={styles.userAvatar}
+                resizeMode="cover"
+                />
+
           <View>
-            <Text style={styles.userName}>Amit Kumar</Text>
+            <Text style={styles.userName}>Rahul Mehter</Text>
             <Text style={styles.userPhone}>+91 784367302</Text>
           </View>
         </View>
