@@ -1,22 +1,49 @@
 import { View, Text, ScrollView, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { useEffect, useState } from "react";
 import Screen from "../../components/Screen";
 import { styles } from "../../styles/Site/project.styles";
-import { PROJECTS } from "../../data/project";
+import { API_URL } from "../../utils/api";
 
 export default function ProjectPage() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
 
-  // 🔑 Find the project using ID
-  const project = PROJECTS.find((p) => p.id === id);
+  const [project, setProject] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  // Safety check
+  useEffect(() => {
+    if (!id) return;
+
+    fetch(`${API_URL}/projects/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        setProject(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Project fetch error:", err);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (loading) {
+    return (
+      <Screen>
+        <Text style={{ textAlign: "center", marginTop: 40 }}>
+          Loading project...
+        </Text>
+      </Screen>
+    );
+  }
+
   if (!project) {
     return (
       <Screen>
-        <Text>Project not found</Text>
+        <Text style={{ textAlign: "center", marginTop: 40 }}>
+          Project not found
+        </Text>
       </Screen>
     );
   }
@@ -77,49 +104,46 @@ export default function ProjectPage() {
               </Text>
             </View>
           </View>
+
           <Pressable style={styles.linkRow}>
             <Ionicons name="home-outline" size={18} />
             <Text style={styles.linkText}>View Site Plan</Text>
           </Pressable>
         </View>
 
-
-
-
         {/* Daily Tasks */}
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Daily Tasks</Text>
 
           <View style={styles.taskActions}>
-                            <Pressable
-                              style={[styles.actionBox, styles.yellow]}
-                              onPress={() =>
-                                router.push({
-                                  pathname: "/(site)/project/attendance",
-                                  params: { id },
-                                })
-                              }
-                            >
-                              <Ionicons name="list-outline" size={40} />
-                              <Text style={styles.actionText}>Mark Attendance</Text>
-                            </Pressable>
+            <Pressable
+              style={[styles.actionBox, styles.yellow]}
+              onPress={() =>
+                router.push({
+                  pathname: "/(site)/project/attendance",
+                  params: { id },
+                })
+              }
+            >
+              <Ionicons name="list-outline" size={40} />
+              <Text style={styles.actionText}>Mark Attendance</Text>
+            </Pressable>
 
-                                <Pressable
-                                  style={[styles.actionBox, styles.blue]}
-                                  onPress={() =>
-                                    router.push({
-                                      pathname: "/(site)/project/dpr",
-                                      params: { id },
-                                    })
-                                  }
-                                >
-                                  <Ionicons name="document-text-outline" size={40} />
-                                  <Text style={styles.actionText}>Add DPR</Text>
-                                </Pressable>
-
+            <Pressable
+              style={[styles.actionBox, styles.blue]}
+              onPress={() =>
+                router.push({
+                  pathname: "/(site)/project/dpr",
+                  params: { id },
+                })
+              }
+            >
+              <Ionicons name="document-text-outline" size={40} />
+              <Text style={styles.actionText}>Add DPR</Text>
+            </Pressable>
           </View>
 
-           {/* Upcoming Tasks */}
+          {/* Upcoming Tasks (static for now) */}
           <Text style={styles.subTitle}>Upcoming Tasks</Text>
 
           {["Plumbing", "Plaster", "Waterproofing", "Install pipes"].map(
@@ -132,7 +156,7 @@ export default function ProjectPage() {
             )
           )}
 
-          {/* Low stock */}
+          {/* Low stock (static for now) */}
           <View style={styles.alertBox}>
             <Ionicons name="warning-outline" size={18} color="#B45309" />
             <View>
@@ -144,7 +168,6 @@ export default function ProjectPage() {
             </View>
           </View>
         </View>
-
       </ScrollView>
     </Screen>
   );
