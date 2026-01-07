@@ -65,40 +65,24 @@ export default function ManagerTabs() {
             }}
           />
 
+
+
                   <Tabs.Screen
-            name="project/material_approval"
+            name="project/view_dpr"
             options={{
               href: null,
             }}
           />
 
-                  <Tabs.Screen
-            name="project/dpr_approval"
-            options={{
-              href: null,
-            }}
-          />
-
-           <Tabs.Screen
-            name="project/generate_invoice"
-            options={{
-              href: null,
-            }}
-          />
 
           <Tabs.Screen
-            name="project/invoice"
+            name="project/view_invoice"
             options={{
               href: null,
             }}
           />
 
-            <Tabs.Screen
-            name="project/new_project"
-            options={{
-              href: null,
-            }}
-          />
+
 
           
     </Tabs>

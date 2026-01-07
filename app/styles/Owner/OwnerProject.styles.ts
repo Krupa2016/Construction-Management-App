@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
   imagewrapper:{
 alignItems: "center", justifyContent: "center", backgroundColor: "#fff", padding: 10, borderRadius: 12, marginTop: 20,paddingBottom: -100,elevation: 3,
   },
+
+  
 riskCard: {
   backgroundColor: "#FEF3C7",
   borderRadius: 12,

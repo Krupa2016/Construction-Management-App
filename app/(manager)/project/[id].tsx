@@ -67,6 +67,12 @@ export default function ManagerProjectPage() {
                     </View>
 
 
+
+
+
+                    
+
+
         {/* Quick Actions */}
 
         <View style={{ marginTop: 24 }}>
@@ -106,22 +112,119 @@ export default function ManagerProjectPage() {
         </View>
       
 
-          <View style={styles.imageWrapper}>
+
+
+                 {/* Manager Insights */}
+                  <View style={styles.managerInsightCard}>
+                    <Text style={styles.insightTitle}>Manager Insights</Text>
+
+                    <View style={styles.insightRow}>
+                      <Ionicons name="time-outline" size={16} color="#EA580C" />
+                      <Text style={styles.insightText}>
+                        Project running 4 days behind schedule
+                      </Text>
+                    </View>
+
+                    <View style={styles.insightRow}>
+                      <Ionicons name="cash-outline" size={16} color="#B45309" />
+                      <Text style={styles.insightText}>
+                        Material cost exceeded budget by ₹1.2L
+                      </Text>
+                    </View>
+
+                    <View style={styles.insightRow}>
+                      <Ionicons name="people-outline" size={16} color="#7C3AED" />
+                      <Text style={styles.insightText}>
+                        Labour efficiency dropped by 6% this week
+                      </Text>
+                    </View>
+                  </View>
+
+
+
+
+
+
+
+          <View style={styles.imagewrapper}>
             <Image
               source={require("../../../assets/images/labour_usage.png")}
               style={styles.userAvatar}
               resizeMode="contain"
             />
+
+            
+                        {/* Safety & Compliance */}
+              <View style={styles.safetyCard}>
+                <View style={styles.safetyHeader}>
+                  <Ionicons name="shield-checkmark-outline" size={18} color="#065F46" />
+                  <Text style={styles.safetyTitle}>Safety & Compliance</Text>
+                </View>
+
+                <View style={styles.safetyRow}>
+                  <Ionicons name="checkmark-circle-outline" size={16} color="#16A34A" />
+                  <Text style={styles.safetyText}>
+                    42 days without safety incident
+                  </Text>
+                </View>
+
+                <View style={styles.safetyRow}>
+                  <Ionicons name="clipboard-outline" size={16} color="#16A34A" />
+                  <Text style={styles.safetyText}>
+                    Safety checks completed for this week
+                  </Text>
+                </View>
+
+                <View style={styles.safetyRow}>
+                  <Ionicons name="document-text-outline" size={16} color="#16A34A" />
+                  <Text style={styles.safetyText}>
+                    Insurance & labour compliance active
+                  </Text>
+                </View>
+              </View>
           </View>
 
 
-                    <View style={styles.imageWrapper}>
+                    <View style={styles.imagewrapper}>
             <Image
               source={require("../../../assets/images/material_used.png")}
               style={styles.userAvatar}
               resizeMode="contain"
             />
+            
+
+             {/* Material Insights */}
+              <View style={styles.mCard}>
+                <Text style={styles.mTitle}>Material Insights</Text>
+
+                <View style={styles.mRow}>
+                  <Ionicons name="trending-up-outline" size={16} color="#DC2626" />
+                  <Text style={styles.mText}>
+                    Cement usage highest (↑ 18% this month)
+                  </Text>
+                </View>
+
+                <View style={styles.mRow}>
+                  <Ionicons name="warning-outline" size={16} color="#F59E0B" />
+                  <Text style={styles.mText}>
+                    Steel stock low – approx. 4 days remaining
+                  </Text>
+                </View>
+
+                <View style={styles.mRow}>
+                  <Ionicons name="cart-outline" size={16} color="#2563EB" />
+                  <Text style={styles.mText}>
+                    Recommended to reorder Cement & Steel this week
+                  </Text>
+                </View>
+              </View>
           </View>
+
+
+             
+ 
+
+
 
       </ScrollView>
     </Screen>

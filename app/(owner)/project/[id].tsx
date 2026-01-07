@@ -250,6 +250,35 @@ export default function ProjectPage() {
 
 
 
+
+                   {/* Quick Actions */}
+
+        <View style={{ marginTop: 24 }}>
+          <Text style={managerStyles.sectionTitle}>Quick Actions</Text>
+
+                <Pressable
+                  style={managerStyles.actionBtn}
+                  onPress={() =>
+                  router.push(`/(owner)/project/view_dpr?id=${project.id}`)
+                  }
+                >
+                  <Ionicons name="document-text-outline" size={20} />
+                  <Text style={managerStyles.actionText}>View DPR</Text>
+                </Pressable>
+
+                <Pressable
+                  style={managerStyles.actionBtn}
+                  onPress={() =>
+                  router.push(`/(owner)/project/view_invoice?id=${project.id}`)
+                  }
+                >
+                  <Ionicons name="receipt-outline" size={20} />
+                  <Text style={managerStyles.actionText}>View Invoice</Text>
+                </Pressable>
+
+        </View>
+
+
       </ScrollView>
     </Screen>
   );
